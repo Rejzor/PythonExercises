@@ -10,9 +10,8 @@ def check_hour_format(*arg):
 	return final_digits
 def main():
 	from itertools import permutations
-	
+
 	random_nums=[str(random.randrange(0,9)) for number in range(4)] # generate for numbers
-	print(random_nums)
 	permutations=[''.join(perm) for perm in permutations(random_nums)] # all permutations, ''. join(perm) for conver from ('1','1','1','1') format to ('1111').
 	final_digits= check_hour_format(*permutations) # check all permutations 
 	final_digits.sort() # sort from lowest to highest
